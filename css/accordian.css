@@ -1,0 +1,382 @@
+.horizontal-accordian {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 35px;
+    align-items: center;
+    justify-content: start;
+}
+
+.accordian_module .pattern-heading h3 {
+    text-align: center;
+}
+
+.table__cell {
+    position: relative;
+    display: flex;
+    width: 90px;
+    height: 650px;
+    align-items: center;
+    justify-content: center;
+    transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 10px 25px;
+    margin: 10px;
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.table__cell::before {
+    content: "";
+    background-color: #000;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.table__cell.active {
+    width: 500px;
+}
+
+.table__cell.active {
+    background-image: none !important;
+    background-color: #fff;
+    /* border-left: 1px solid #000000; */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    /* padding: 30px; */
+    filter: none;
+}
+
+.table__cell span {
+    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.table__cell.active::before {
+    content: none;
+}
+
+.table__cell.active span {
+    opacity: 1;
+    transition-delay: 300ms;
+    color: #008f90;
+}
+
+.table__cell.active {
+    display: block;
+}
+
+.table__cell .acc-logo-img,
+.table__cell .acc-content {
+    display: block;
+}
+
+.table__cell .acc-logo-img {
+    text-align: center;
+}
+
+.table__cell .acc-logo-img,
+.table__cell .acc-content {
+    display: none;
+}
+
+.table__cell.active .acc-logo-img,
+.table__cell.active .acc-content {
+    display: block;
+}
+
+.table__cell .acc-logo-img img {
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.table__cell .acc-content {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+}
+
+.table__cell .acc-heading {
+    display: none;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: capitalize;
+}
+
+ .table__cell span img{
+    height: 60px;
+ }
+/* number accordian */
+
+.number-module .table__cell {
+    width: 160px;
+    height: 600px;
+}
+
+.number-module .table__cell.active {
+    width: 800px;
+}
+
+.number-module .table__cell span {
+    font-size: 90px;
+    line-height: 123px;
+}
+
+.number-module .table__cell.active span {
+    display: none;
+}
+
+.table__cell.active .acc-heading {
+    display: block;
+}
+
+.number-module .table__cell .acc-logo-img img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    margin: 30px 0;
+}
+
+.number-module .table__cell.active {
+    border-left: none;
+}
+
+.acc-content ul {
+    padding-left: 40px;
+    list-style: disc;
+}
+
+.acc-content ul li {
+    list-style: disc;
+}
+
+
+/* service module */
+
+.service_module .table__cell.active {
+    width: 350px;
+}
+.service_module .table__cell{
+    width:100px;
+    height:550px;
+}
+
+.service_module .acc-logo-img {
+    width: 350px;
+}
+
+.service_module .table__cell .acc-logo-img img {
+    height: auto;
+    width: auto;
+}
+
+.service_module .table__cell.active span {
+    display: none;
+}
+
+.service_module .table__cell.active .acc-content span {
+    display: block;
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+
+/* Shelter module */
+
+.shelter-module .table__cell {
+    height: 480px;
+}
+
+.shelter-module .acc-logo-img {
+    width: 480px;
+}
+
+.shelter-module .table__cell .acc-logo-img img {
+    height: auto;
+    width: auto;
+}
+
+.shelter-module .table__cell.active span {
+    display: none;
+}
+
+.shelter-module .table__cell.active .acc-content span {
+    display: block;
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1600px) {
+    .service_module .acc-logo-img {
+        width: 380px;
+    }
+    .service_module .table__cell span img {
+        height: 70px;
+        width: 70px;
+    }
+    .shelter-module .acc-logo-img {
+        width: 380px;
+    }
+    .shelter-module .table__cell span img {
+        height: 70px;
+        width: 70px;
+    }
+    .horizontal-accordian {
+        overflow-x: scroll;
+    }
+    .number-module .table__cell .acc-logo-img img {
+    height: 275px;}
+    .service_module {
+    overflow-x: scroll;
+}
+}
+
+@media screen and (max-width: 1440px) {
+    .table__cell span {
+        font-size: 26px;
+    }
+    .service_module .acc-logo-img {
+        width: 280px;
+    }
+    .service_module .table__cell {
+        width: 100px;
+    }
+    .service_module .table__cell span img {
+        height: 60px;
+        width: 60px;
+    }
+    .shelter-module .acc-logo-img {
+        width: 280px;
+    }
+    .shelter-module .table__cell {
+        width: 100px;
+    }
+    .shelter-module .table__cell span img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .service_module .acc-logo-img {
+        width: 200px;
+    }
+    .shelter-module .acc-logo-img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .table__cell span {
+        font-size: 20px;
+    }
+    .horizontal-accordian {
+        overflow-x: scroll;
+        justify-content: start;
+    }
+    .number-module {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .number-module .table__cell {
+        width: 100%;
+        height: 100px;
+    }
+    .horizontal-accordian {
+        display: block;
+        overflow: hidden;
+    }
+    .table__cell {
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+    }
+    .table__cell.active {
+        width: 100%;
+        height: 100%;
+    }
+    .table__cell .acc-logo-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .table__cell .acc-content {
+        font-size: 16px;
+        line-height: 26px;
+        color: #000;
+    }
+    .number-module .table__cell span {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .accordian_module .pattern-heading h3 {
+        text-align: center;
+    }
+    .number-module .table__cell.active {
+        width: 100%;
+    }
+    .number-module .table__cell .acc-logo-img img {
+        height: auto;
+        margin: 10px 0;
+    }
+    .service_module .table__cell {
+        width: 100%;
+    }
+    .service_module .table__cell.active {
+        width: 100%;
+        text-align: center;
+    }
+    .service_module .acc-logo-img {
+        margin: 0 auto;
+    }
+    .service_module .table__cell.active .acc-content span {
+        margin-bottom: 10px;
+    }
+    .shelter-module .table__cell {
+        width: 100%;
+    }
+    .shelter-module .table__cell.active {
+        width: 100%;
+        text-align: center;
+    }
+    .shelter-module .acc-logo-img {
+        margin: 0 auto;
+    }
+    .shelter-module .table__cell.active .acc-content span {
+        margin-bottom: 10px;
+    }
+    .shelter-module .table__cell {
+        height: 100px !important;
+    }
+    .shelter-module .table__cell.active {
+        height: 100% !important;
+    }
+}

@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Janna LT Regular";
+  src: url("../fonts/Janna LT Regular.woff2") format("woff2"),
+    url("../fonts/Janna LT Regular.woff") format("woff"),
+    url("../fonts/Janna LT Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Janna LT Bold";
+  src: url("../fonts/Janna LT Bold.woff2") format("woff2"),
+    url("../fonts/Janna LT Bold.woff") format("woff"),
+    url("../fonts/Janna LT Bold.ttf") format("truetype");
+}
+* {
+  font-family: "Janna LT Regular";
+}
+.divider-green {
+  background: url(../images/divider-green.png);
+  width: 704px;
+  height: 50px;
+  margin: 90px auto;
+}
+.two-columns h2 {
+  font-family: "Janna LT Bold";
+  font-size: 28px;
+  line-height: 49px;
+  color: #000000;
+  text-align: right;
+}
+.border-green {
+  border-top: 1px solid #008f90;
+}
+.inner-col {
+  margin-top: 33px;
+  width: 100%;
+  overflow: hidden;
+}
+.col-left {
+  width: 25%;
+  background: rgba(221, 221, 219, 0.3);
+  padding: 39px 29px 10px 21px;
+  float: right;
+  margin-left: 30px;
+}
+.col-left ul li {
+  margin-bottom: 10px;
+}
+.col-left button {
+  background: transparent;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: right;
+  color: #4a4a49;
+  cursor: pointer;
+  font-family: "Janna LT";
+  position: relative;
+  padding: 5px;
+  width: 100%;
+}
+.col-left button.active {
+  color: #008f90;
+}
+.col-left button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: -6%;
+  right: 0;
+  height: 112%;
+  background: #e5e5e5;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.col-left button.active::after,
+.col-left button:hover:after {
+  width: 100%;
+}
+.col-right {
+  float: left;
+  margin-right: 30px;
+  width: 65%;
+  margin-top: 20px;
+}
+.border-black {
+  border-top: 1px solid #000000;
+}
+/**************************** accordion */
+/*_________________  Accordion
+________________________________________*/
+.accordion {
+  position: relative;
+  margin: 20px auto;
+}
+
+[id*="open-accordion"],
+[id*="close-accordion"] {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  line-height: 30px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion a {
+  color: #000000;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  text-shadow: none;
+  margin: 15px 0 0px 0;
+}
+
+.accordion p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-weight: normal;
+}
+.accordion .blt-list:last-of-type {
+  margin-bottom: 0;
+}
+.accordion .blt-list li {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+  background: #f7f7f7;
+  height: 0;
+  margin: 0;
+  padding: 0 2.5%;
+  position: relative;
+  overflow: hidden;
+  width: 93%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 15px;
+  padding-top: 25;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+  font-style: normal;
+  font-family: "Janna LT Bold";
+  font-size: 18px;
+  line-height: 34px;
+  color: #008e8f !important;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+/**********************************/
+.text {
+  position: relative;
+}
+
+.text-tab.active {
+  visibility: visible;
+  display: block;
+}
+
+.text-tab {
+  display: none;
+}

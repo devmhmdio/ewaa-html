@@ -1,0 +1,24 @@
+.container {
+    height: 150px;
+    width: 100px;
+    display: block;
+    overflow: hidden;
+    background: green;
+}
+
+.newsletter {
+    position: relative;
+    top: 150px;
+    width: 100px;
+    height: 100px;
+    background: red;
+
+    -webkit-transition: top 0.5s;
+    /* For Safari 3.1 to 6.0 */
+    transition: top 0.5s;
+}
+
+.container:hover .newsletter {
+    top: 50px;
+}
+

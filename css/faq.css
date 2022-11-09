@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "Avenir-light";
+    src: url("../fonts/Avenir-light.woff2") format("woff2"), url("../fonts/path-to/Avenir-light.woff") format("woff"), url("../fonts/path-to/Avenir-light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Avenir-Regular";
+    src: url("../fonts/Avenir-Regular.woff2") format("woff2"), url("../fonts/Avenir-Regular.woff") format("woff"), url("../fonts/Avenir-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Avenir-Medium";
+    src: url("../fonts/Avenir-Medium.woff2") format("woff2"), url("../fonts/Avenir-Medium.woff") format("woff"), url("../fonts/Avenir-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Avenir-Bold";
+    src: url("../fonts/Avenir-Bold.woff2") format("woff2"), url("../fonts/Avenir-Bold.woff") format("woff"), url("../fonts/Avenir-Bold.ttf") format("truetype");
+}
+
+* {
+    font-family: "Avenir-Regular";
+}
+
+.divider-green {
+    background: url(../images/divider-green.png);
+    width: 704px;
+    height: 50px;
+    margin: 90px auto;
+}
+
+.two-columns h2 {
+    font-family: "Avenir-Bold";
+    font-size: 28px;
+    line-height: 49px;
+    color: #000000;
+    text-align: left;
+}
+
+.border-green {
+    border-top: 1px solid #008f90;
+}
+
+.inner-col {
+    margin-top: 33px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.col-left {
+    width: 30%;
+    /* background: rgba(221, 221, 219, 0.3); */
+    padding: 39px 29px 10px 21px;
+    float: left;
+    /* margin-right: 30px; */
+}
+
+.col-left ul li {
+    margin-bottom: 20px;
+}
+
+.col-left button {
+    background: transparent;
+    border: none;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    color: #4a4a49;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.col-left button::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    top: -20%;
+    left: 0;
+    height: 140%;
+    /* background: #e5e5e5; */
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.col-left button.active {
+    color: #008f90;
+}
+
+.col-left button.active::after,
+.col-left button:hover:after {
+    width: 100%;
+}
+
+.col-right {
+    float: right;
+    margin-left: 30px;
+    width: 65%;
+}
+
+.border-black {
+    border-top: 1px solid #000000;
+}
+
+
+/**************************** accordion */
+
+
+/*_________________  Accordion
+________________________________________*/
+
+.accordion {
+    position: relative;
+    margin: 0 auto 50px;
+}
+
+[id*="open-accordion"],
+[id*="close-accordion"] {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    line-height: 30px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 99%;
+}
+
+[id*="close-accordion"] {
+    display: none;
+}
+
+.accordion a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: none;
+    margin: 15px 0 0px 0;
+    font-weight: 600;
+}
+
+.accordion p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 18px;
+    font-weight: normal;
+}
+
+.accordion p:last-child {
+    margin-bottom: 0;
+}
+
+.accordion .blt-list:last-of-type {
+    margin-bottom: 0;
+}
+
+.accordion .blt-list li {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.target-fix {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.accordion-content {
+    /* background: #f7f7f7; */
+    height: 0;
+    margin: 0;
+    /* padding: 0 2.5%; */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+.accordion span:target~.accordion-content {
+    display: block;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #a39161;
+}
+
+.accordion span:target~[id*="close-accordion"] {
+    display: block;
+    font-style: normal;
+    font-family: "Avenir-Bold";
+    font-size: 16px;
+    line-height: 24px;
+    color: #008e8f !important;
+    border-top: 1px solid #a39161;
+    padding-top: 15px;
+}
+
+.accordion span:target~[id*="open-accordion"] {
+    display: none;
+}
+
+
+/**********************************/
+
+.text {
+    position: relative;
+}
+
+.text-tab.active {
+    visibility: visible;
+    display: block;
+}
+
+.text-tab {
+    display: none;
+}
+
+.ewaa-faqs .faq-head {
+    margin: 20px 0 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #a39167;
+    font-size: 18px;
+    font-weight: 900;
+    color: #000;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 991px) {
+    .col-left {
+        width: 100%;
+    }
+    .col-right {
+        width: 100%;
+    }
+    .ewaa-faqs .faq-head {
+        margin-bottom: 0;
+    }
+}
